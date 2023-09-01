@@ -79,3 +79,8 @@ Breakdown of changes made to this repository, includes dates and days these chan
 * Completed all designated criteria from the pseudo code in `miniproject1-pseudo.txt`.
 * Added comments as descriptions, and `TODO's` for further improvement.
 * imports of unittest & os were included for unit-testing and terminal clearing functionality.
+
+
+## MISC
+
+* `find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch`.

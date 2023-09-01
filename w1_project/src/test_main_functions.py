@@ -57,6 +57,7 @@ class TestMethods(unittest.TestCase):
         result = user_product_validation(test_value, test_list)
         self.assertEqual(result, True)
 
+
 #TODO review this functionality.
 if __name__ == "__main__":
     unittest.main()

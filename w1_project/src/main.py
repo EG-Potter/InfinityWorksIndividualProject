@@ -109,6 +109,7 @@ def main_menu():
                 clear_screen()
                 print(f"\n(!) Invalid Entry: {unknown_command}. (!)\n")
 
+
 #TODO review this functionality.
 if __name__ == '__main__':
     main_menu()
