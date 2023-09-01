@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # Ignore Mac system files
-.DS_store
+**/.DS_Store
