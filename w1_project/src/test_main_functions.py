@@ -23,13 +23,11 @@ class TestMethods(unittest.TestCase):
     def test_display_elements_with_index_values_with_elements_in_list(self):
         test_list = ["First", "Second", "Third"]
         result = display_elements_with_index_values(test_list)
-        print(result)
         self.assertEqual(result, '\nList of Products and Indexes:\n\n0: First\n1: Second\n2: Third\n')
     
     def test_display_elements_with_index_values_with_empty_list(self):
         test_list = []
         result = display_elements_with_index_values(test_list)
-        print(result)
         self.assertEqual(result, '\nList of Products and Indexes:\n\n')
 
 

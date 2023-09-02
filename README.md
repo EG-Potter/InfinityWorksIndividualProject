@@ -92,7 +92,8 @@ Breakdown of changes made to this repository, includes dates and days these chan
 
 ### Week 1 - Change Log.
 
-01/09/2023 - Friday:
+
+**01/09/2023 - Friday:**
 
 * Set up folder structure for Week 1 Project.
   * Folders Inc: `notes` for documentation, and `src` including programing files.
@@ -105,7 +106,8 @@ Breakdown of changes made to this repository, includes dates and days these chan
 * Implemented comments as descriptions, and `TODO's` for further improvement.
 * imports of unittest & os were included for unit-testing and terminal clearing functionality.
 
-02/09/2023 - Saturday:
+
+**02/09/2023 - Saturday:**
 
 * Cleaned sub-optimal code, and improved spacing in files for better readability.
 * Implemented seperation of a main menu and product menu functionality.
@@ -117,9 +119,11 @@ Breakdown of changes made to this repository, includes dates and days these chan
   * `data` folder was added to handle Title & Menu constants seperately from `main.py`.
   * `sys.path.append('../')` was added to deal with pathing to files in seperate folders.
 
+
 ### Week 2 - Change Log.
 
-02/09/2023 - Saturday:
+
+**02/09/2023 - Saturday:**
 
 * Set up folder structure for Week 2 Project, Folders Inc:
 
@@ -133,11 +137,16 @@ Breakdown of changes made to this repository, includes dates and days these chan
   * `test_main_functions.py` for testing functions from `main_functions.py`.
 * Added `mini-project-week-2.md` to `notes` folder to give overview of week2 project.
 * Added `application_data.py` to `data` folder, contains data/constants needed for functionality.
+* Added in comments to divide functions and unit-tests in files.
+* Changed `main_functions.py` to `functions.py`.
+
+  * `test_main_functions.py `also to `test_functions.py.`
 
 
 ### README - Change Log.
 
-01/09/2023 - Friday:
+
+**01/09/2023 - Friday:**
 
 * Created `README.md`, structed with Title & Sub-Sections:
   * `Instructions`, `Testing`, `Imports`, `Change Log`, and `MISC`.
@@ -147,13 +156,15 @@ Breakdown of changes made to this repository, includes dates and days these chan
 * Added sub-section `Week 1 Imports` to `Imports` sub-seciton.
 * Added sub-section `Week 1 - Change Log` to  `Change Log` sub-section.
 
-02/09/2023 - Saturday:
+
+**02/09/2023 - Saturday:**
 
 * Cleaned up sub-optimal elements within `README.md.`
 * Added sub-section `Prerequisites` to `Instructions` sub-section.
 * Added sub-section `/data` to `Folder Structure` sub-section.
 * Added sub-section `Week 2 - Change Log` to `Change Log` sub-section.
 * Added sub-section `README - Change Log `to `Change Log` sub-section.
+
 
 ## MISC
 

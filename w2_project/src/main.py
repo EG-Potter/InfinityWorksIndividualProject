@@ -2,11 +2,10 @@
 import sys
 sys.path.append('../')
 from data.application_data import *
-from main_functions import *
+from functions import *
 
 
 def main_menu():
-
     while True:
         # title and menu print for main menu.
         print(APP_TITLE, MAIN_MENU)
@@ -16,11 +15,10 @@ def main_menu():
         clear_screen()
 
         match menu_input:
-
             case 1:
                 # Exits into Product Menu Functionality.
                 while True:
-                     # Title and Menu print for product menu.
+                    # Product Title and Menu print.
                     print(PRODUCT_TITLE, PRODUCT_MENU)
 
                     # Gets a user input in relation to PRODUCT_MENU options.
@@ -28,11 +26,10 @@ def main_menu():
                     clear_screen()
 
                     match product_menu_input:
-
                         case 1:
-                            # Prints elements in PRODUCT_LIST.
+                            # Displays elements in PRODUCT_LIST.
                             clear_screen()
-                            print(display_list_elements(PRODUCT_LIST)) 
+                            print(display_list(PRODUCT_LIST)) 
                             input("\nPress any key to continue ... ")
                             clear_screen()
 
@@ -52,7 +49,7 @@ def main_menu():
                         case 3:
                             # Prints product names w/ index values, then gets a user input for product index value.
                             while True: #TODO merge while loop into single unit-testable function, unit-test would require Mock.
-                                print(display_elements_with_index_values(PRODUCT_LIST))
+                                print(display_list_with_index_values(PRODUCT_LIST))
                                 try:
                                     user_idx_value = int(input("\nEnter numeric index value of product: "))
                                     clear_screen()
@@ -82,7 +79,7 @@ def main_menu():
                         case 4:
                             # Prints product names w/ index values, then gets a user input for product index value.
                             while True: #TODO merge while loop into single unit-testable function, unit-test would require Mock.
-                                print(display_elements_with_index_values(PRODUCT_LIST))
+                                print(display_list_with_index_values(PRODUCT_LIST))
                                 try:
                                     user_idx_value = int(input("\nEnter numeric index value of product: "))
                                     clear_screen()
@@ -100,6 +97,43 @@ def main_menu():
 
                                 print(f"\n(!) Invalid Entry: {user_idx_value} (!)\n")
                             
+                        case 0:
+                            # Return to main menu.
+                            main_menu()
+
+                        case unknown_command:
+                            # Catches unknown user inputs not present in match case.
+                            print(f"\n(!) Invalid Entry: {unknown_command}. (!)\n")
+
+            case 2:
+                while True:
+                    # Order Title and Menu print.
+                    print(ORDER_TITLE, ORDER_MENU)
+
+                    # Gets a user input in relation to PRODUCT_MENU options.
+                    order_menu_input = int(input("\nEnter your selection in numeric form: "))
+                    clear_screen()
+
+                    match order_menu_input:
+                        case 1:
+                            # Displays elements in CUSTOMER_ORDERS_LIST.
+                            clear_screen()
+                            print(display_list_of_dictionary(CUSTOMER_ORDER_LIST)) 
+                            input("\nPress any key to continue ... ")
+                            clear_screen()
+
+                        case 2:
+                            pass
+
+                        case 3:
+                            pass
+
+                        case 4:
+                            pass
+
+                        case 5:
+                            pass
+
                         case 0:
                             # Return to main menu.
                             main_menu()

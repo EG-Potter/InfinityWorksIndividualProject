@@ -1,37 +1,37 @@
 import unittest
-
-from main_functions import *
-
+from functions import *
 
 class TestMethods(unittest.TestCase):
+
+    """ (*) TERMINAL/DISPLAY FUNCTION TESTING (*) """
 
     #TODO create a unit-test for clear_screen() function?
 
     # display_list_elements() testing.
     def test_display_list_elements_with_elements_in_list(self):
         test_list = ["First", "Second", "Third"]
-        result = display_list_elements(test_list)
+        result = display_list(test_list)
         self.assertEqual(result, '\nList of Products in Storage:\n\nFirst\nSecond\nThird\n')
 
     def test_display_list_elements_with_empty_list(self):
         test_list = []
-        result = display_list_elements(test_list)
+        result = display_list(test_list)
         self.assertEqual(result, '\nList of Products in Storage:\n\n')
     
 
     # display_elements_with_index_values() testing.
     def test_display_elements_with_index_values_with_elements_in_list(self):
         test_list = ["First", "Second", "Third"]
-        result = display_elements_with_index_values(test_list)
-        print(result)
+        result = display_list_with_index_values(test_list)
         self.assertEqual(result, '\nList of Products and Indexes:\n\n0: First\n1: Second\n2: Third\n')
     
     def test_display_elements_with_index_values_with_empty_list(self):
         test_list = []
-        result = display_elements_with_index_values(test_list)
-        print(result)
+        result = display_list_with_index_values(test_list)
         self.assertEqual(result, '\nList of Products and Indexes:\n\n')
 
+
+    """ (*) VALIDATION FUNCTION TESTING (*) """
 
     # user_index_validation() testing.
     def test_user_index_validation_with_value_within_index_range(self):

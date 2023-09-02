@@ -6,7 +6,6 @@ from main_functions import *
 
 
 def main_menu():
-
     while True:
         # Title and Menu print for main menu.
         print(APP_TITLE, MAIN_MENU)
@@ -16,11 +15,10 @@ def main_menu():
         clear_screen()
 
         match menu_input:
-
             case 1:
                 # Exits into Product Menu Functionality.
                 while True:
-                     # title and menu print for product menu.
+                    # Product Title and Menu print.
                     print(PRODUCT_TITLE, PRODUCT_MENU)
 
                     # Gets a user input in relation to PRODUCT_MENU options.
@@ -28,7 +26,6 @@ def main_menu():
                     clear_screen()
 
                     match product_menu_input:
-
                         case 1:
                             # Prints elements in PRODUCT_LIST.
                             clear_screen()
