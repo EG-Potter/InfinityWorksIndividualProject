@@ -40,7 +40,7 @@ Includes the main source code and functionality for the applicaiton: `main.py`.
 
 Includes the functions which are usually included in external folders, as well as relevant unit-testing files.
 
-    e.g.`main_functions.py` & `test_main_functions.py`.
+    e.g.`main_functions.py`.
 
 #### /notes.
 
@@ -48,11 +48,31 @@ includes files and documentation relevant for the weekly projects i.e. weekly ps
 
     e.g.`miniproject1-pseudo.txt`.
 
-#### /data.
+#### /app_data.
 
-Includes files related to data/constants related to the functionality of the app.
+Includes files related to data/constants related to the functionality of the app (Menus, Titles, Collections etc).
 
-    e.g.`application_data.py`.
+    e.g.`app_data.py`.
+
+#### /import_data.
+
+Includes files which have data to be externally imported.
+
+    e.g.`uk_registered_places.txt`.
+
+#### /sub_menu.
+
+Includes files which hold specific menu functionality, such as that for products or orders.
+
+* Gives the ability for more localised/modular testing.
+
+    e.g.`order_menu.py` and `product_menu.py`.
+
+#### /unit_testing.
+
+Includes files related to unit_testing, which is implemented through test-driven development.
+
+    e.g.`test_main_functions.py`.
 
 ## Testing.
 
@@ -68,7 +88,7 @@ $ py {filename}.py (e.g. py test_main_functions.py)
 $ python3 {filename}.py (e.g. python3 test_main_functions.py)
 ```
 
-### Week 1 Testing Files.
+### Week 1 - Testing Files.
 
 `test_main_functions.py`
 
@@ -78,7 +98,7 @@ $ python3 {filename}.py (e.g. python3 test_main_functions.py)
 
 Breakdown of imports used for each weekly iteration of the individual project.
 
-### Week 1 Imports.
+### Week 1 - Imports.
 
 ```
 import unittest
@@ -86,65 +106,19 @@ import sys
 import os
 ```
 
+### Week 2 - Imports.
+
+In addition to those from Week 1:
+
+```
+from ukpostcodeutils import validation
+```
+
 ## Change Log.
 
-Breakdown of changes made to this repository, includes dates and days these changes were made.
-
-### Week 1 - Change Log.
-
-
-**01/09/2023 - Friday:**
-
-* Set up folder structure for Week 1 Project.
-  * Folders Inc: `notes` for documentation, and `src` including programing files.
-* Created files for handling code within `src` folder.
-  * `main.py` for main functionality of applicaiton.
-  * `main_functions.py` to externally handle functions.
-  * `test_main_functions.py` for testing functions from `main_functions.py`.
-* Added `miniproject1-pseudo.txt` to `notes` folder to give overview of week1 project.
-* Completed all designated criteria from the pseudo code in `miniproject1-pseudo.txt`.
-* Implemented comments as descriptions, and `TODO's` for further improvement.
-* imports of unittest & os were included for unit-testing and terminal clearing functionality.
-
-
-**02/09/2023 - Saturday:**
-
-* Cleaned sub-optimal code, and improved spacing in files for better readability.
-* Implemented seperation of a main menu and product menu functionality.
-* Implemented specific menu constants for each section.
-  * `MAIN_MENU `& `PRODUCTS MENU`.
-* Implemented specific title constants for each section.
-  * `APP_TITLE` & `PRODUCT_TITLE`.
-* Implemented new folder into the folder structure.
-  * `data` folder was added to handle Title & Menu constants seperately from `main.py`.
-  * `sys.path.append('../')` was added to deal with pathing to files in seperate folders.
-
-
-### Week 2 - Change Log.
-
-
-**02/09/2023 - Saturday:**
-
-* Set up folder structure for Week 2 Project, Folders Inc:
-
-  * `notes` for documentation,
-  * `src` including programing files.
-  * `data` for data/constant storage.
-* Created files for handling code within `src` folder.
-
-  * `main.py` for main functionality of applicaiton.
-  * `main_functions.py` to externally handle functions.
-  * `test_main_functions.py` for testing functions from `main_functions.py`.
-* Added `mini-project-week-2.md` to `notes` folder to give overview of week2 project.
-* Added `application_data.py` to `data` folder, contains data/constants needed for functionality.
-* Added in comments to divide functions and unit-tests in files.
-* Changed `main_functions.py` to `functions.py`.
-
-  * `test_main_functions.py `also to `test_functions.py.`
-
+Breakdown of changes made to the README.md, includes dates and days these changes were made.
 
 ### README - Change Log.
-
 
 **01/09/2023 - Friday:**
 
@@ -152,10 +126,9 @@ Breakdown of changes made to this repository, includes dates and days these chan
   * `Instructions`, `Testing`, `Imports`, `Change Log`, and `MISC`.
 * Added sub-section `Folder Structure` to `Instructions` sub-section.
   * Added sub-sections `/src`. & `/notes`. to `Folder Structure` sub-section.
-* Added sub-section `Week 1 Testing Files` to `Testing` sub-section.
-* Added sub-section `Week 1 Imports` to `Imports` sub-seciton.
+* Added sub-section `Week 1 - Testing Files` to `Testing` sub-section.
+* Added sub-section `Week 1 - Imports` to `Imports` sub-seciton.
 * Added sub-section `Week 1 - Change Log` to  `Change Log` sub-section.
-
 
 **02/09/2023 - Saturday:**
 
@@ -165,7 +138,17 @@ Breakdown of changes made to this repository, includes dates and days these chan
 * Added sub-section `Week 2 - Change Log` to `Change Log` sub-section.
 * Added sub-section `README - Change Log `to `Change Log` sub-section.
 
+**04/09/2023 - Monday:**
+
+* Moved Change Logs for individual weekly projects into README.md files within each weeks folder.
+* Added sub-sections `/import_data`, `/sub_menu`, `/unit_testing` to `Folder Structure` sub-section.
+* Updated sub-section /data to /app_data in `Folder Structure` sub-section.
+* Added sub-section `Week 2 - Imports` to `Imports` sub-seciton.
+* Added additions to `MISC` sub-section.
 
 ## MISC
 
 * `find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch`.
+* `nameof(-)` - `from varname import varname, nameof`
+* https://pypi.org/project/uk-postcode-utils/
+  * https://github.com/mysociety/uk-postcode-utils

@@ -1,7 +1,7 @@
 # Imported external functions. 
 import sys
 sys.path.append('../')
-from data.application_data import *
+from app_data.app_data import *
 from main_functions import *
 
 

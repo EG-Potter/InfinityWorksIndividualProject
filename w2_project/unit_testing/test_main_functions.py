@@ -1,13 +1,22 @@
+import sys
+sys.path.append('../')
+from src.main_functions import *
+
 import unittest
-from functions import *
+
 
 class TestMethods(unittest.TestCase):
+
+    """ (*) IMPORT FUNCTIONS (*) """
+
+    # import_txt_as_list(2);
+
 
     """ (*) TERMINAL/DISPLAY FUNCTION TESTING (*) """
 
     #TODO create a unit-test for clear_screen() function?
 
-    # display_list_elements() testing.
+    # display_list_elements(1);
     def test_display_list_elements_with_elements_in_list(self):
         test_list = ["First", "Second", "Third"]
         result = display_list(test_list)
@@ -19,7 +28,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(result, '\nList of Products in Storage:\n\n')
     
 
-    # display_elements_with_index_values() testing.
+    # display_elements_with_index_values(1);
     def test_display_elements_with_index_values_with_elements_in_list(self):
         test_list = ["First", "Second", "Third"]
         result = display_list_with_index_values(test_list)
@@ -31,9 +40,15 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(result, '\nList of Products and Indexes:\n\n')
 
 
+    # display_list_of_dictionary(1);
+
+
+    # display_list_of_dictionary_with_index_values(1);
+
+
     """ (*) VALIDATION FUNCTION TESTING (*) """
 
-    # user_index_validation() testing.
+    # user_index_validation(2);
     def test_user_index_validation_with_value_within_index_range(self):
         test_list = ["First", "Second", "Third"]
         test_value = 0
@@ -47,7 +62,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(result, False)
 
 
-    # user_product_validation() testing.
+    # user_product_validation(2);
     def test_user_product_validation_with_element_within_list(self):
         test_list = ["First", "Second", "Third"]
         test_value = "First"
@@ -59,6 +74,11 @@ class TestMethods(unittest.TestCase):
         test_value = "Forth"
         result = user_product_validation(test_value, test_list)
         self.assertEqual(result, True)
+
+
+    """ UNKNOWN (TO NAME) """
+
+     # customer_address_modification(3);
 
 
 #TODO review this functionality.

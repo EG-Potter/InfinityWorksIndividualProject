@@ -38,6 +38,12 @@ ORDER_TITLE = "\n(*) Welcome to the Order Menu Section. (*)\n"
 # PRODUCT_LIST; 
 PRODUCT_LIST = ["Tea", "Green Tea", "Black Tea", "Cappuccino", "Americano", "Black Coffee", "Vanilla Latte", "Latte"]
 
+# ORDER_STATUS_LIST;
+ORDER_STATUS_LIST = ["preparing", "out-for-delivery", "delivered"]
+
+# UK_REGISTERED_PLACES_LIST;
+UK_REGISTERED_PLACES_LIST = []
+
 # CUSTOMER_ORDER_LIST; 
 CUSTOMER_ORDER_LIST = [{
    "customer_name": "John",
@@ -69,3 +75,8 @@ CUSTOMER_ORDER_LIST = [{
    "customer_phone": "0789887335",
    "status": "preparing"
 }]
+
+""" URL & File Names """
+
+# UK_REGISTERED_PLACES_STORAGE;
+UK_REGISTERED_PLACES_STORAGE = 'uk_registered_places.txt'

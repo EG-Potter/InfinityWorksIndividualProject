@@ -1,11 +1,16 @@
-# Imported external functions. 
 import sys
 sys.path.append('../')
-from data.application_data import *
-from functions import *
+# Imported external sub menus. 
+from sub_menu.product_menu import *
+from sub_menu.order_menu import *
+# Imported external functions and data. 
+from app_data.app_data import *
+from main_functions import *
 
 
-def main_menu():
+import_txt_as_list(UK_REGISTERED_PLACES_STORAGE, UK_REGISTERED_PLACES_LIST)
+
+def main_menu_handler():
     while True:
         # title and menu print for main menu.
         print(APP_TITLE, MAIN_MENU)
@@ -16,135 +21,13 @@ def main_menu():
 
         match menu_input:
             case 1:
-                # Exits into Product Menu Functionality.
-                while True:
-                    # Product Title and Menu print.
-                    print(PRODUCT_TITLE, PRODUCT_MENU)
-
-                    # Gets a user input in relation to PRODUCT_MENU options.
-                    product_menu_input = int(input("\nEnter your selection in numeric form: "))
-                    clear_screen()
-
-                    match product_menu_input:
-                        case 1:
-                            # Displays elements in PRODUCT_LIST.
-                            clear_screen()
-                            print(display_list(PRODUCT_LIST)) 
-                            input("\nPress any key to continue ... ")
-                            clear_screen()
-
-                        case 2:
-                            # Gets user input for a product name, then appends product name to PRODUCT_LIST.
-                            while True:
-                                new_product_entry = input("\nEnter name of new product: ").title()
-                                clear_screen()
-                                # Check to see if the entered product already exists.
-                                if user_product_validation(new_product_entry, PRODUCT_LIST) == True:
-                                    print(f"(!) {new_product_entry} added into storage. (!)")
-                                    PRODUCT_LIST.append(new_product_entry)
-                                    break
-                        
-                                print(f"\n(!) Invalid Entry: {new_product_entry}.\n (!)")
-
-                        case 3:
-                            # Prints product names w/ index values, then gets a user input for product index value.
-                            while True: #TODO merge while loop into single unit-testable function, unit-test would require Mock.
-                                print(display_list_with_index_values(PRODUCT_LIST))
-                                try:
-                                    user_idx_value = int(input("\nEnter numeric index value of product: "))
-                                    clear_screen()
-                                except Exception as error:
-                                    clear_screen()
-                                    print(f"\n(!) Invalid Entry: {error}. (!)\n")
-                                    continue
-
-                                # Checks if inputted user index value exists within PRODUCT_LIST.
-                                if user_index_validation(user_idx_value, PRODUCT_LIST) == True:
-                                    break
-                                
-                                print(f"\n(!) Invalid Entry: {user_idx_value}. (!)\n")
-
-                            # Gets user input for a new product name, updates the product name at chosen index in PRODUCT_LIST.
-                            while True:
-                                new_product_entry = input("\nEnter name of new product: ").title()
-                                clear_screen()
-                                # Check to see if the entered product already exists.
-                                if user_product_validation(new_product_entry, PRODUCT_LIST) == True:
-                                    print(f"{PRODUCT_LIST[user_idx_value]} has been replace by {new_product_entry} in storage.")
-                                    PRODUCT_LIST[user_idx_value] = new_product_entry
-                                    break
-                                
-                                print(f"\n(!) Invalid Entry: {new_product_entry}. (!)\n")
-
-                        case 4:
-                            # Prints product names w/ index values, then gets a user input for product index value.
-                            while True: #TODO merge while loop into single unit-testable function, unit-test would require Mock.
-                                print(display_list_with_index_values(PRODUCT_LIST))
-                                try:
-                                    user_idx_value = int(input("\nEnter numeric index value of product: "))
-                                    clear_screen()
-                                except Exception as error:
-                                    clear_screen()
-                                    print(f"\n(!) Invalid Entry: {error}. (!)\n")
-                                    continue
-
-                                # Checks if inputted user index value exists within PRODUCT_LIST.
-                                if user_index_validation(user_idx_value, PRODUCT_LIST) == True:
-                                    # Delete product at index value in PRODUCT_LIST.
-                                    print(f"\n(!) {PRODUCT_LIST[user_idx_value]} removed from storage. (!)\n")
-                                    del PRODUCT_LIST[user_idx_value]
-                                    break
-
-                                print(f"\n(!) Invalid Entry: {user_idx_value} (!)\n")
-                            
-                        case 0:
-                            # Return to main menu.
-                            main_menu()
-
-                        case unknown_command:
-                            # Catches unknown user inputs not present in match case.
-                            print(f"\n(!) Invalid Entry: {unknown_command}. (!)\n")
+                product_menu_handler() # Enters into Product Menu Functionality.
 
             case 2:
-                while True:
-                    # Order Title and Menu print.
-                    print(ORDER_TITLE, ORDER_MENU)
-
-                    # Gets a user input in relation to PRODUCT_MENU options.
-                    order_menu_input = int(input("\nEnter your selection in numeric form: "))
-                    clear_screen()
-
-                    match order_menu_input:
-                        case 1:
-                            # Displays elements in CUSTOMER_ORDERS_LIST.
-                            clear_screen()
-                            print(display_list_of_dictionary(CUSTOMER_ORDER_LIST)) 
-                            input("\nPress any key to continue ... ")
-                            clear_screen()
-
-                        case 2:
-                            pass
-
-                        case 3:
-                            pass
-
-                        case 4:
-                            pass
-
-                        case 5:
-                            pass
-
-                        case 0:
-                            # Return to main menu.
-                            main_menu()
-
-                        case unknown_command:
-                            # Catches unknown user inputs not present in match case.
-                            print(f"\n(!) Invalid Entry: {unknown_command}. (!)\n")
+                order_menu_handler() # Enters into Order Menu Functionality.
 
             case 0:
-                # Exits Application.
-                sys.exit("\n(*) Exited Application. (*)\n")
+                sys.exit("\n(*) Exited Application. (*)\n") # Exits Application.
 
             case unknown_command:
                 # Catches unknown user inputs not present in match case.
@@ -154,4 +37,4 @@ def main_menu():
 #TODO review this functionality.
 if __name__ == '__main__':
     clear_screen()
-    main_menu()
+    main_menu_handler()
