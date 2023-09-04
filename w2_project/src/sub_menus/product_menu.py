@@ -3,7 +3,7 @@ sys.path.append('../')
 
 from app_data.app_data import *
 
-from src.main_functions import *
+from functions.main_functions import *
 from src.main import main_menu_handler
 
 

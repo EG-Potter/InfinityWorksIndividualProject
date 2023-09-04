@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../')
-from src.main_functions import *
+from functions.main_functions import *
 
 import unittest
 
@@ -76,7 +76,7 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(result, True)
 
 
-    """ UNKNOWN (TO NAME) """
+    """ MODIFICATION FUNCTIONS """
 
      # customer_address_modification(3);
 

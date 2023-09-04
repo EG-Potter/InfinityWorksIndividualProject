@@ -1,11 +1,11 @@
 import sys
 sys.path.append('../')
 # Imported external sub menus. 
-from sub_menu.product_menu import *
-from sub_menu.order_menu import *
+from sub_menus.product_menu import *
+from sub_menus.order_menu import *
 # Imported external functions and data. 
 from app_data.app_data import *
-from main_functions import *
+from functions.main_functions import *
 
 
 import_txt_as_list(UK_REGISTERED_PLACES_STORAGE, UK_REGISTERED_PLACES_LIST)

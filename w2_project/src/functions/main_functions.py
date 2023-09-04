@@ -5,7 +5,7 @@ import os
 # import_txt_as_list(2);
 def import_txt_as_list(file_name : str, collection : list) -> list:
     try:
-        file = open('../import_data/' + file_name, 'r')
+        file = open('.../app_data/import_data/' + file_name, 'r')
         for line in file.readlines():
             collection.append(line.strip())
         file.close()
@@ -81,7 +81,7 @@ def user_product_validation(user_value : str, list_of_elements : list) -> bool:
         return True
     return False
 
-""" UNKNOWN (TO NAME) """
+""" MODIFICATION FUNCTIONS """
 
 # customer_address_modification(3);
 def customer_address_modification(idx : int, address_segment : str, full_address : str) -> str:
